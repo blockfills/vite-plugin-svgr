@@ -2,15 +2,14 @@
   "name": "vite-plugin-svgr",
   "version": "2.2.0",
   "description": "Vite plugin to transform SVGs into React components",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
-    }
+    },
+    "./client": "./client.d.ts"
   },
   "scripts": {
     "dev": "tsc --watch",
@@ -30,14 +29,22 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
     "typescript": "^4.7.4",
     "vite": "^2.9.12"
   },
   "peerDependencies": {
-    "vite": "^2.6.0 || 3"
+    "@types/react": "^16.8 || 17.x || 18.x",
+    "vite": "^2.6.0 || 3.x"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
   },
   "dependencies": {
     "@rollup/pluginutils": "^4.2.1",
     "@svgr/core": "^6.2.1"
-  }
+  },
+  "packageManager": "pnpm@7.4.0"
 }
