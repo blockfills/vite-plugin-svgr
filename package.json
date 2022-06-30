@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc && tsc --module esnext --outDir temp && mv temp/index.js dist/index.mjs && rm -rf temp",
-    "prepare": "rm -rf lib && npm run build"
+    "prepack": "rm -rf lib && npm run build"
   },
   "repository": "pd4d10/vite-plugin-svgr",
   "files": [
