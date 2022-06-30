@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svgr",
-  "version": "2.2.0-patch.2",
+  "version": "2.2.0-patch.3",
   "description": "Vite plugin to transform SVGs into React components",
   "repository": "pd4d10/vite-plugin-svgr",
   "license": "MIT",
