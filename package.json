@@ -6,15 +6,15 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "default": "./dist/index.js"
     },
-    "./client": "./client.d.ts"
+    "./client": "./client.d.ts",
+    "./package.json": "./package.json"
   },
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc && tsc --module esnext --outDir temp && mv temp/index.js dist/index.mjs && rm -rf temp",
-    "prepack": "rm -rf lib && npm run build"
+    "build": "tsc",
+    "prepack": "rm -rf dist && npm run build"
   },
   "repository": "pd4d10/vite-plugin-svgr",
   "files": [
