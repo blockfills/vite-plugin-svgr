@@ -46,5 +46,5 @@
     "@rollup/pluginutils": "^4.2.1",
     "@svgr/core": "^6.2.1"
   },
-  "packageManager": "pnpm@7.4.0"
+  "packageManager": "yarn@3.2.1"
 }
