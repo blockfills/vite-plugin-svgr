@@ -2,6 +2,9 @@
   "name": "vite-plugin-svgr",
   "version": "2.2.0-patch.2",
   "description": "Vite plugin to transform SVGs into React components",
+  "repository": "pd4d10/vite-plugin-svgr",
+  "license": "MIT",
+  "author": "Rongjian Zhang",
   "type": "module",
   "exports": {
     ".": {
@@ -11,22 +14,15 @@
     "./client": "./client.d.ts",
     "./package.json": "./package.json"
   },
-  "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "prepack": "rm -rf dist && yarn run build"
-  },
-  "repository": "pd4d10/vite-plugin-svgr",
   "files": [
     "dist",
     "client.d.ts"
   ],
-  "keywords": [
-    "vite",
-    "vite-plugin"
-  ],
-  "author": "Rongjian Zhang",
-  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepack": "rm -rf dist && yarn run build"
+  },
   "dependencies": {
     "@rollup/pluginutils": "^4.2.1",
     "@svgr/core": "^6.2.1",
