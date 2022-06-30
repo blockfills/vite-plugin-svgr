@@ -1,8 +1,11 @@
-import fs from 'fs'
-import type { Config } from '@svgr/core'
+import * as fs from 'node:fs'
+
+import { createFilter } from '@rollup/pluginutils'
 import { transformWithEsbuild } from 'vite'
-import type { Plugin } from 'vite'
-import { createFilter, FilterPattern } from '@rollup/pluginutils'
+
+import type { FilterPattern } from '@rollup/pluginutils'
+import type { Config } from '@svgr/core'
+import type { EsbuildTransformOptions, Plugin } from 'vite'
 
 export interface ViteSvgrOptions {
   /**
@@ -13,7 +16,7 @@ export interface ViteSvgrOptions {
    */
   exportAsDefault?: boolean
   svgrOptions?: Config
-  esbuildOptions?: Parameters<typeof transformWithEsbuild>[2]
+  esbuildOptions?: EsbuildTransformOptions
   exclude?: FilterPattern
   include?: FilterPattern
 }
